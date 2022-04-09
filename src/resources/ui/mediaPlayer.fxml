@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="module.Controller">
+    <children>
+        <AnchorPane layoutY="8.0" prefHeight="505.0" prefWidth="57.0" style="-fx-background-color: #15202b; -fx-background-radius: 8em;">
+            <children>
+                <ImageView fx:id="music" layoutX="14.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/music.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="video" layoutX="14.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/videocam.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="image" layoutX="13.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/image-2.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="setting" layoutX="13.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/settings.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="drag" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/drag-move-2-line.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="MOVE" />
+                    </cursor>
+                </ImageView>
+            </children></AnchorPane>
+        <AnchorPane layoutX="66.0" layoutY="8.0" prefHeight="505.0" prefWidth="819.0" style="-fx-background-color: #3c3f41; -fx-background-radius: 1em;">
+            <children>
+                <AnchorPane fx:id="photoPane" layoutY="24.0" prefHeight="480.0" prefWidth="819.0" style="-fx-background-color: #393c3e; -fx-background-radius: 1em;">
+                    <children>
+                        <Label layoutX="317.0" layoutY="200.0" text="Photo" textFill="#b2b2b2">
+                            <font>
+                                <Font size="65.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="777.0" layoutY="-8.0" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #0d1117; -fx-background-radius: 1em;" />
+                <ImageView fx:id="close" layoutX="787.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/close-circle.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <Label fx:id="imagesPathLabel" alignment="BOTTOM_LEFT" layoutX="320.0" layoutY="207.0" prefHeight="36.0" prefWidth="369.0" textFill="#d08787">
+                    <font>
+                        <Font name="Garuda" size="19.0" />
+                    </font>
+                </Label>
+                <AnchorPane fx:id="musicPane" layoutX="4.0" layoutY="24.0" prefHeight="480.0" prefWidth="813.0" style="-fx-background-color: #393c3e; -fx-background-radius: 1em;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="238.0" layoutY="169.0" prefHeight="143.0" prefWidth="344.0" text="Media" textFill="#b5aeae">
+                            <font>
+                                <Font size="96.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="settingPane" layoutY="25.0" prefHeight="480.0" prefWidth="819.0" style="-fx-background-color: #393c3e; -fx-background-radius: 1em;">
+                    <children>
+                        <Label layoutX="115.0" layoutY="61.0" prefHeight="24.0" prefWidth="112.0" text="Songs Path" textFill="#d7baba">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="139.0" layoutY="124.0" prefHeight="24.0" prefWidth="118.0" text="Videos Path" textFill="#d7baba">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="171.0" layoutY="190.0" prefHeight="24.0" prefWidth="124.0" text="Images Path" textFill="#d7baba">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <JFXToggleButton layoutX="187.0" layoutY="261.0" prefHeight="32.0" prefWidth="42.0" text=" " toggleColor="#39c999" />
+                        <Label layoutX="27.0" layoutY="280.0" prefHeight="24.0" prefWidth="112.0" text="Notification" textFill="#d7baba">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <JFXButton alignment="CENTER" layoutX="32.0" layoutY="408.0" prefHeight="32.0" prefWidth="177.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em;" text="Check Update" textFill="#393939">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font name="Manjari Regular" size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <Separator layoutX="47.0" layoutY="249.0" opacity="0.11" prefHeight="1.0" prefWidth="753.0" style="-fx-border-color: #15202b;" />
+                        <Label layoutX="27.0" layoutY="350.0" prefHeight="24.0" prefWidth="158.0" text="Current Version:" textFill="#d7baba">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="728.0" layoutY="456.0" prefHeight="24.0" prefWidth="77.0" text="22.04 V0.1" textFill="#a45065">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="TOP" layoutX="197.0" layoutY="350.0" prefHeight="24.0" prefWidth="112.0" text="22.04 V0.1" textFill="#57f842">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="songFolder" layoutX="712.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/folder-open.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fx:id="videoFolder" layoutX="712.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/folder-open.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fx:id="imagesFolder" layoutX="711.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/folder-open.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Line endX="469.0" layoutX="265.0" layoutY="82.0" startX="-15.0" stroke="#39c999" />
+                        <Line endX="467.0" layoutX="266.0" layoutY="145.0" startX="17.0" stroke="#39c999" />
+                        <Line endX="467.0" layoutX="266.0" layoutY="210.0" startX="53.0" stroke="#39c999" />
+                        <Label fx:id="songPathLabel" alignment="BOTTOM_LEFT" layoutX="252.0" layoutY="54.0" prefHeight="36.0" prefWidth="369.0" textFill="#d08787">
+                            <font>
+                                <Font name="Garuda" size="19.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="videoPathLabel" alignment="BOTTOM_LEFT" layoutX="284.0" layoutY="117.0" prefHeight="36.0" prefWidth="369.0" textFill="#d08787">
+                            <font>
+                                <Font name="Garuda" size="19.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="101.0" prefHeight="42.0" prefWidth="91.0" rotate="-90.0" text="Media Paths" textFill="#6f6f6f">
+                            <font>
+                                <Font name="Chilanka Regular" size="16.0" />
+                            </font>
+                        </Label>
+                        <Line endX="-96.0" endY="-19.0" layoutX="144.0" layoutY="29.0" startX="-96.0" startY="47.5" stroke="#6b6565" />
+                        <Line endX="-96.0" endY="-19.0" layoutX="143.0" layoutY="195.0" startX="-96.0" startY="50.0" stroke="#6b6565" />
+                        <ProgressBar layoutX="233.0" layoutY="419.0" prefHeight="12.0" prefWidth="299.0" />
+                        <Label layoutX="538.0" layoutY="416.0" prefHeight="17.0" prefWidth="32.0" text="0%" textFill="#ababab">
+                            <font>
+                                <Font name="Ubuntu Mono" size="17.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="videoPane" layoutY="24.0" prefHeight="480.0" prefWidth="819.0" style="-fx-background-color: #393c3e; -fx-background-radius: 1em;">
+                    <children>
+                  <AnchorPane layoutX="13.0" layoutY="423.0" prefHeight="50.0" prefWidth="802.0" style="-fx-background-color: #0d1117; -fx-background-radius: 5em;">
+                     <children>
+                        <JFXSlider fx:id="volumeSlider" layoutX="611.0" layoutY="28.0" prefHeight="16.0" prefWidth="158.0" showTickMarks="true" stylesheets="@../css/style.css" value="1.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXSlider>
+                        <ImageView layoutX="342.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/skip-back-outline.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="pausePlayIcon" layoutX="385.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/play-circle.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView layoutX="427.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/skip-forward-outline.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="24.0" fitWidth="16.0" layoutX="770.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/volume-up.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="resetIcon" layoutX="537.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Reset.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView layoutX="592.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/volume-mute-fill.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <JFXSlider fx:id="videoSlider" layoutX="24.0" layoutY="-4.0" prefHeight="16.0" prefWidth="753.0" showTickMarks="true" styleClass="colored-track" stylesheets="@../css/VideoSlider.css" value="0.1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXSlider>
+                        <HBox fx:id="hBox" layoutX="80.0" layoutY="14.0" prefHeight="45.0" prefWidth="225.0" rotate="180.0" />
+                     </children>
+                  </AnchorPane>
+                  <StackPane layoutX="2.0" layoutY="2.0" prefHeight="413.0" prefWidth="815.0">
+                     <children>
+                        <MediaView fx:id="videoPreviewViewer" fitHeight="413.0" fitWidth="815.0" />
+                     </children>
+                  </StackPane>
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

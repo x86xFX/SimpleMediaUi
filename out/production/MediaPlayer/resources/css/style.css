@@ -1,0 +1,46 @@
+.progress-bar {
+    -fx-accent: #f13c6f;
+}
+
+.progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 5;
+    -fx-background-radius: 0;
+}
+
+.progress-bar > .track {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-box-border: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-color: #393c3e;
+}
+
+.root {
+    -fx-custom-color : #f13c6f;
+}
+
+/* Styling the slider track */
+.jfx-slider>.track {
+    -fx-pref-height: 5;
+}
+
+/* Styling the slider thumb */
+.jfx-slider>.thumb {
+    -fx-pref-height: 10;
+    -fx-background-color: -fx-custom-color;
+}
+
+/* Styling the filled track */
+.jfx-slider>.colored-track {
+    -fx-background-color: linear-gradient(to right, #21eca9, #eb275f);
+}
+
+/* Styling the animated thumb */
+.jfx-slider>.animated-thumb {
+    visibility:hidden;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}

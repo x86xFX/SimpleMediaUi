@@ -1,0 +1,20 @@
+/* Styling the slider track */
+.jfx-slider>.track {
+    -fx-pref-height: 5;
+}
+
+/* Styling the slider thumb */
+.jfx-slider>.thumb {
+    -fx-pref-height: 10;
+    -fx-background-color: #115bee;
+}
+
+/* Styling the filled track */
+.jfx-slider>.colored-track {
+    -fx-background-color: linear-gradient(to right, #040001, #115bee);
+}
+
+/* Styling the animated thumb */
+.jfx-slider>.animated-thumb {
+    visibility:hidden;
+}
